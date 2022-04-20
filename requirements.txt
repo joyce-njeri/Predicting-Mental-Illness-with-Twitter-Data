@@ -1,0 +1,6 @@
+streamlit
+numpy
+sklearn
+nltk
+inflect
+keras
