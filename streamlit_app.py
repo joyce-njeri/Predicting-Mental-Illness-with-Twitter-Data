@@ -35,7 +35,6 @@ st.write("To begin, please enter a user's tweet below")
 sample_tweet = st.text_input('Enter Tweet:', max_chars=250, placeholder='Start typing ...')
 
 # Prediction
-# st.subheader('Make Prediction')
 ok = st.button('Make Prediction')
 
 # Data upload
@@ -161,20 +160,6 @@ loaded_model = model_from_json(loaded_model_json)
 # load weights into new model
 loaded_model.load_weights("model.h5")
 print("Loaded model from disk")
-
-# # Stream live tweets
-# st.sidebar.markdown('## Stream Live Tweets') 
-# live_score = FALSE
-
-# df = pd.DataFrame()
-# if live_score != True:
-#     df = pd.read_csv(uploaded_file)
-#     st.markdown('<hr>', unsafe_allow_html=True)
-#     st.markdown(f'<h3 "> Data Preview </h3>',unsafe_allow_html=True)
-#     pd.set_option('display.max_colwidth', None)
-#     st.write(df.head(10))
-
-#     score = st.checkbox('Check to predict scores')
 
 if ok:
     def predictor(sample_tweet):
